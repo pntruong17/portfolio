@@ -46,8 +46,7 @@ const Projects = () => {
         />
         <p className="text-5xl text-_color1 ml-5">
           This is a project: an online fashion shop, written on the{" "}
-          <span className="text-_color3">Next.js</span>
-          platform. It utilizes{" "}
+          <span className="text-_color3">Next.js</span> platform. It utilizes{" "}
           <span className="text-_color3">Tailwind CSS</span> for styling. It has{" "}
           <span className="text-_color3">good SEO</span>
           capabilities and allows online payment.It is{" "}

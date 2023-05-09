@@ -37,7 +37,7 @@ const Screen = () => {
   let windowWidth,
     windowHeight = 100;
   const parentRef = useRef();
-  const [textDialog, setTextDialog] = useState(true);
+  const [textDialog, setTextDialog] = useState(false);
   const [profileDialog, setProfileDialog] = useState(false);
   const [pictureDialog, setPictureDialog] = useState(false);
   const [projectDialog, setProjectDialog] = useState(false);
@@ -61,6 +61,14 @@ const Screen = () => {
       setFullContent({});
     }
   }, [select]);
+  useEffect(() => {
+    let timeRef = null;
+    timeRef = setTimeout(() => {
+      setTextDialog(true);
+      clearTimeout(timeRef);
+    }, 1200);
+    return () => clearTimeout(timeRef);
+  }, []);
   return (
     <div
       className="w-full min-h-screen font-main text-color1 p-16 relative overflow-hidden"

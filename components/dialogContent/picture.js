@@ -8,13 +8,13 @@ const Picture = () => {
       <Image
         width={600}
         height={500}
-        src={"/images/mypxArt.png"}
+        src={"/images/profilepicture.png"}
         alt="profile picture"
       />
-      <h2 className="text-6xl text-_color1 mx-3 my-auto">
+      <h2 className="text-5xl text-_color1 mx-3 my-auto">
         <AnimatedTextCharacter
           text={addNewlines(
-            "I have created this image using the @giventofly app!"
+            "I have created this image using the https://www.pixelicious.xyz/ app!"
           )}
         />
       </h2>

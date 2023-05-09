@@ -19,7 +19,7 @@ const Profile = () => {
           <Image
             width={200}
             height={120}
-            src={"/images/mypxArt.png"}
+            src={"/images/profilepicture.png"}
             alt="profile picture"
             className="object-contain"
           />
