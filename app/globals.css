@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,22 +7,40 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --dialog-start-rgb: 251, 209, 107;
+  --dialog-end-rgb: 253, 95, 100;
 }
 
 body {
+  background-image: url("/images/bg1.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.g-dialog {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+      to left,
+      rgba(var(--background-start-rgb), 0),
+      rgb(var(--dialog-start-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--dialog-end-rgb));
+}
+.scrollbar::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #fbd16b;
+  border-radius: 0px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #fbd16b;
 }
