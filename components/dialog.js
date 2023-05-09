@@ -14,12 +14,12 @@ const Dialog = (props) => {
     height,
     select,
     setSelect,
+    windowWidth,
+    windowHeight,
   } = props;
   const containerStyle = { width: width, height: height };
   const contentSize = { width: width - 5, height: height - 50 };
 
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
   const divWidth = width;
   const divHeight = height;
   const left = (windowWidth - divWidth - 100) / 2;

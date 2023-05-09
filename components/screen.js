@@ -34,6 +34,8 @@ const projectsWelcome = {
 
 const onDrag = (id) => {};
 const Screen = () => {
+  let windowWidth,
+    windowHeight = 100;
   const parentRef = useRef();
   const [textDialog, setTextDialog] = useState(true);
   const [profileDialog, setProfileDialog] = useState(false);
@@ -45,8 +47,11 @@ const Screen = () => {
   const [full, setFull] = useState(false);
   const [fullContent, setFullContent] = useState({});
 
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
+  if (typeof window !== "undefined") {
+    windowWidth = window.innerWidth;
+    windowHeight = window.innerHeight;
+    // Do something with windowWidth and windowHeight
+  }
   useEffect(() => {
     if (select === 1) {
       setFullContent(proFileWelcome);
@@ -145,6 +150,8 @@ const Screen = () => {
           width={windowWidth < 800 ? windowWidth - 10 : 800 - 10}
           height={650}
           content={proFileWelcome}
+          windowWidth={windowWidth}
+          windowHeight={windowHeight}
         />
       ) : null}
 
@@ -159,6 +166,8 @@ const Screen = () => {
           width={windowWidth < 800 ? windowWidth - 10 : 800 - 10}
           height={windowHeight - 100}
           content={projectsWelcome}
+          windowWidth={windowWidth}
+          windowHeight={windowHeight}
         />
       ) : null}
       {contactDialog ? (
@@ -172,6 +181,8 @@ const Screen = () => {
           width={windowWidth < 800 ? windowWidth - 10 : 800 - 10}
           height={450}
           content={contactWelcome}
+          windowWidth={windowWidth}
+          windowHeight={windowHeight}
         />
       ) : null}
 
@@ -186,6 +197,8 @@ const Screen = () => {
           width={windowWidth < 800 ? windowWidth - 10 : 800 - 10}
           height={800}
           content={pictureWelcome}
+          windowWidth={windowWidth}
+          windowHeight={windowHeight}
         />
       ) : null}
       {textDialog ? (
@@ -199,6 +212,8 @@ const Screen = () => {
           width={windowWidth < 800 ? windowWidth - 10 : 800 - 10}
           height={650}
           content={textWelcome}
+          windowWidth={windowWidth}
+          windowHeight={windowHeight}
         />
       ) : null}
       {full ? (
