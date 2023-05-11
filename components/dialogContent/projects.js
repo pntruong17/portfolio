@@ -54,7 +54,7 @@ const Projects = () => {
           explore!
         </p>
         <Link
-          href="flexfashion-98krf66xm-pntruong17.vercel.app"
+          href="https://flexfashion.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className="w-32 mx-auto mt-5 mb-14 text-_color1 font-bold bg-_color2  py-3 px-5 focus:outline-none text-2xl"
